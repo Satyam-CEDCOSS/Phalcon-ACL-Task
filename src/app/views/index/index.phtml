@@ -1,0 +1,35 @@
+<?php
+
+$btn="btn btn-primary";
+echo "<h1>Hello User</h1>";
+
+echo PHP_EOL;
+
+echo $this->tag->linkTo(['product','Product','class' => $btn]);
+
+echo PHP_EOL;
+
+echo $this->tag->linkTo([
+    'order',
+    'Order',
+    'class' => $btn
+]
+);
+
+echo PHP_EOL;
+
+echo $this->tag->linkTo([
+    'setting',
+    'Setting',
+    'class' => $btn
+]
+);
+
+echo PHP_EOL;
+
+echo $this->tag->linkTo([
+    'add',
+    'Add CAU',
+    'class' => $btn
+]
+);

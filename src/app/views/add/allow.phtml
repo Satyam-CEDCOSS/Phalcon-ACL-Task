@@ -1,0 +1,45 @@
+<h2>Request Allow</h2>
+<br>
+<?php echo $this->tag->form("add/allact"); ?>
+<label for="roles">Role:
+    <select name="roles" id="roles">
+        <?php
+        $role = "<option value=''>-Select-</option>";
+        foreach ($_SESSION['roles'] as $key => $value) {
+            $role .= "<option value=" . $value['role'] . ">" . $value['role'] . "</option>";
+        }
+        echo $role;
+        ?>
+    </select>
+</label>
+<label for="contollers">Contollers:
+    <select name="contollers" id="contollers">
+        <?php
+        $role = "<option value=''>-Select- </option>";
+        foreach ($_SESSION['contacts'] as $key => $value) {
+            $role .= "<option value= " . $value['cont'] . ">" . $value['cont'] . "</option> ";
+        }
+        echo $role;
+        ?>
+    </select>
+</label>
+<label for="actions">Actions:
+    <select name="actions" id="actions">
+        <?php
+        $role = "<option value=''>-Select-</option>";
+        foreach ($_SESSION['contacts'] as $key => $value) {
+            $role .= "<option value=" . $value['act'] . ">" . $value['act'] . "</option>";
+        }
+        echo $role;
+        ?>
+    </select>
+</label>
+<input class="btn btn-primary" type="submit" value="Add">
+</form>
+<br>
+<?php
+echo $this->tag->linkTo([
+    'add',
+    'Back',
+    'class' => 'btn btn-primary'
+]);

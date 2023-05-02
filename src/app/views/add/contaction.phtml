@@ -1,0 +1,19 @@
+<h2>Controller and Action</h2>
+<br>
+<?php echo $this->tag->form("add/contact"); ?>
+    <label for="cont">Controller:
+        <input type="text" name="cont" id="cont">
+    </label><br><br>
+<?php echo $this->tag->form("add/roleact"); ?>
+    <label for="act">Action:
+        <input type="text" name="act" id="act">
+    </label><br><br>
+    <input class="btn btn-primary" type="submit" value="Add">
+</form>
+<br>
+<?php
+echo $this->tag->linkTo([
+    'add',
+    'Back',
+    'class' => 'btn btn-primary'
+]);

@@ -1,0 +1,27 @@
+<h2>Setting</h2>
+<br>
+<?php echo $this->tag->form("setting/add"); ?>
+    <label for="title">Title optimization:
+        <select name="title" id="title">
+            <option value="Tags">With tags</option>
+            <option value="">Without tags</option>
+        </select>
+    </label><br><br>
+    <label for="price">Default Price:
+        <input type="text" name="price" id="price">
+    </label><br><br>
+    <label for="stock">Default Stock:
+        <input type="text" name="stock" id="stock">
+    </label><br><br>
+    <label for="zipcode">Default Zipcode:
+        <input type="text" name="zipcode" id="zipcode">
+    </label><br><br>
+    <input class="btn btn-primary" type="submit" value="Save Setting">
+</form>
+<br>
+<?php
+echo $this->tag->linkTo([
+    'index',
+    'Back',
+    'class' => 'btn btn-primary'
+]);

@@ -1,0 +1,15 @@
+<h2>Role</h2>
+<br>
+<?php echo $this->tag->form("add/roleact"); ?>
+    <label for="role">Role:
+        <input type="text" name="role" id="role">
+    </label><br><br>
+    <input class="btn btn-primary" type="submit" value="Add">
+</form>
+<br>
+<?php
+echo $this->tag->linkTo([
+    'add',
+    'Back',
+    'class' => 'btn btn-primary'
+]);

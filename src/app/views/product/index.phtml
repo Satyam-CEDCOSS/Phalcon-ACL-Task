@@ -1,0 +1,40 @@
+<h2>Display Product</h2>
+
+<table class="table table-borderd table-striped">
+    <caption>Product Table</caption>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Tags</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        echo $display;
+        ?>
+    </tbody>
+</table>
+
+
+<?php
+
+echo PHP_EOL;
+
+echo $this->tag->linkTo([
+    'index',
+    'Back',
+    'class' => 'btn btn-primary'
+]
+);
+
+echo PHP_EOL;
+
+echo $this->tag->linkTo([
+    'product/list',
+    'Product Add',
+    'class' => 'btn btn-primary'
+]
+);

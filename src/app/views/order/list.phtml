@@ -1,0 +1,31 @@
+<h2>Add Order</h2>
+<br>
+<?php echo $this->tag->form("order/add"); ?>
+    <label for="name">Name:
+        <input type="text" name="name" id="name">
+    </label><br><br>
+    <label for="address">Address:
+        <textarea name="address" id="address" cols="30" rows="3"></textarea>
+    </label><br><br>
+    <label for="zipcode">Zipcode:
+        <input type="text" name="zipcode" id="zipcode">
+    </label><br><br>
+    <label for="product">Product:
+        <select name="product" id="product">
+            <?php
+                echo $this->session->get('option');
+            ?>
+        </select>
+    </label><br><br>
+    <label for="quantity">Quantity:
+        <input type="text" name="quantity" id="quantity">
+    </label><br><br>
+    <input class="btn btn-primary" type="submit" value="Add">
+</form>
+<br>
+<?php
+echo $this->tag->linkTo([
+    'order',
+    'Back',
+    'class' => 'btn btn-primary'
+]);
