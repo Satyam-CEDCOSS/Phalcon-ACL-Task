@@ -34,8 +34,6 @@ class Aclistener extends Injectable
                 echo "Access Denied";
                 die;
             }
-            // print_r($_SESSION['login']);
-            // die;
         }
     }
 }
